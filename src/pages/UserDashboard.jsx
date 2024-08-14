@@ -20,16 +20,27 @@ export default function UserDashboard() {
     if (filter === 'all') return true;
     return inc.status === filter;
   });
+/* 
+  const handleCreateIncidence = async (incidenceData) => {
+    try {
+      await addIncidence({ ...incidenceData, UserId: user.id });
+      setNotification({ type: 'success', message: 'Incidencia creada con éxito' });
+      refreshIncidences(user.id);
+    } catch (error) {
+      setNotification({ type: 'error', message: 'Error al crear la incidencia' });
+    }
+  };  */
 
   const handleCreateIncidence = async (incidenceData) => {
     try {
-      await addIncidence({ ...incidenceData, userId: user.id });
+      await addIncidence({ ...incidenceData, UserId: user.id });
       setNotification({ type: 'success', message: 'Incidencia creada con éxito' });
       refreshIncidences(user.id);
     } catch (error) {
       setNotification({ type: 'error', message: 'Error al crear la incidencia' });
     }
   };
+
 
   const handleUpdateIncidence = async (updatedIncidence) => {
     try {
@@ -51,12 +62,22 @@ export default function UserDashboard() {
     }
   };
 
+  const clearNotification = () => {
+    setNotification(null);
+  };
+
   if (loading) return <div>Cargando...</div>;
   if (error) return <div>Error: {error}</div>;
 
   return (
     <div className="container mx-auto px-4 py-8">
-      {notification && <Notification message={notification.message} type={notification.type} />}
+      {notification && (
+        <Notification 
+        message={notification.message} 
+        type={notification.type} 
+        onClose={clearNotification}
+        />
+        )}
       <h2 className="text-2xl font-bold mb-4">Mis Incidencias</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
@@ -70,7 +91,7 @@ export default function UserDashboard() {
             <IncidenceItem
               key={incidence.id}
               incidence={incidence}
-              onUpdate={handleUpdateIncidence}
+              onEdit={handleUpdateIncidence}
               onDelete={handleDeleteIncidence}
               isAdmin={false}
             />

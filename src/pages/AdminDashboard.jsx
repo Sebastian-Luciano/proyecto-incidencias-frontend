@@ -101,13 +101,22 @@ const AdminDashboard = () => {
     }
   };
 
+  const clearNotification = () => {
+    setNotification(null);
+  };
 
   if (loading) return <div>Cargando...</div>;
   if (error) return <div>Error: {error}</div>;
 
   return (
     <div className="container mx-auto px-4 py-8">
-      {notification && <Notification message={notification.message} type={notification.type} />}
+      {notification && (
+        <Notification 
+        message={notification.message} 
+        type={notification.type}
+        onClose={clearNotification} 
+        />
+    )}
       <h2 className="text-2xl font-bold mb-4">Panel de Administración</h2>
 
       <div className="mb-4 flex flex-row space-x-2">
