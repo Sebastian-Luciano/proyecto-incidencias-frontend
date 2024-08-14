@@ -39,20 +39,6 @@ export const updateUser = async (userId, userData) => {
     throw new Error(error.response?.data?.message || 'Error al actualizar usuario');
   }
 };
-/* 
-export const changePassword = async (userId, currentPassword, newPassword) => {
-  try {
-    const response = await api.put(`/users/${userId}/change-password`, {
-      currentPassword,
-      newPassword
-    });
-    return response.data;
-  } catch (error) {
-    console.error('Error al cambiar contraseña:', error);
-    throw new Error(error.response?.data?.message || 'Error al cambiar contraseña');
-  }
-}; */
-
 
 export const changePassword = async (userId, currentPassword, newPassword) => {
   try {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+/* import React, { useState, useEffect } from 'react';
 import { useAuth } from '../hooks/useAuth';
 import { useIncidences } from '../hooks/useIncidences';
 import { useLocation } from 'wouter';
@@ -92,3 +92,4 @@ export default function Dashboard() {
     </div>
   )
 }
+ */
