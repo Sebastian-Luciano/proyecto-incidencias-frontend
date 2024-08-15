@@ -24,15 +24,15 @@ const IncidenceItem = ({ incidence, isAdmin, onEdit, onDelete }) => {
 
     const getStatusColor = (status) => {
         switch (status) {
-            case 'pending': return 'bg-yellow-100';
-            case 'in_progress': return 'bg-blue-100';
-            case 'resolved': return 'bg-green-100';
+            case 'pending': return 'bg-yellow-300 bg-opacity-30 ';
+            case 'in_progress': return 'bg-blue-300 bg-opacity-30 ';
+            case 'resolved': return 'bg-green-300 bg-opacity-30';
             default: return 'bg-gray-100';
         }
     };
 
     return (
-        <div className={`bg-white p-4 rounded-lg shadow mb-4 ${getStatusColor(incidence.status)}`}>
+        <div className={`bg-white p-4 rounded-lg shadow mb-1 ${getStatusColor(incidence.status)}`}>
             {isEditing ? (
                 <form onSubmit={handleSubmit}>
                     <input
