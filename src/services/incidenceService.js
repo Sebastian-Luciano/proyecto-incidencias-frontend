@@ -12,36 +12,6 @@ export const getIncidences = async (userId = null) => {
   }
 };
 
-/* export const createIncidence = async (incidenceData) => {
-  try {
-    console.log('Datos de incidencia a enviar:', incidenceData);
-    const response = await api.post('/incidences', incidenceData);
-    console.log('Respuesta de creación de incidencia:', response.data);
-
-    const newIncidenceId = response.data.id;
-    if (!newIncidenceId) {
-      console.error('No se recibió ID de incidencia en la respuesta');
-      throw new Error('No se pudo obtener el ID de la incidencia');
-    }
-
-    if (!incidenceData.UserId) {
-      throw new Error('UserId no proporcionado para la notificación');
-    }
-
-    await sendNotification(
-      'Nueva incidencia creada',
-      incidenceData.UserId,
-      newIncidenceId,
-      'email'
-    );
-
-    return response.data;
-  } catch (error) {
-    console.error('Error al crear incidencia:', error.response?.data || error.message);
-    throw error;
-  }
-}; */
-
 export const createIncidence = async (incidenceData) => {
   try {
     const formData = new FormData();

@@ -8,11 +8,13 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import AdminDashboard from './pages/AdminDashboard';
 import UserDashboard from './pages/UserDashboard';
+import ErrorBoundary from './components/ErrorBoundary';
 
 export default function App() {
   const { user } = useAuth();
 
   return (
+    <ErrorBoundary>
     <div className="min-h-screen bg-gray-100">
       <Navbar />
       <Switch>
@@ -27,5 +29,6 @@ export default function App() {
         </Route>
       </Switch>
     </div>
+    </ErrorBoundary>
   )
 }

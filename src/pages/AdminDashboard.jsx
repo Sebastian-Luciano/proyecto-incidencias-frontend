@@ -7,6 +7,7 @@ import { FaSearch } from 'react-icons/fa';
 import { updateIncidence, deleteIncidence } from '../services/incidenceService';
 
 
+
 const AdminDashboard = () => {
   const { incidences, updateIncidenceById, loading, error, refreshIncidences } = useIncidences();
   const [columns, setColumns] = useState({
@@ -111,12 +112,12 @@ const AdminDashboard = () => {
   return (
     <div className="container mx-auto px-4 py-8">
       {notification && (
-        <Notification 
-        message={notification.message} 
-        type={notification.type}
-        onClose={clearNotification} 
+        <Notification
+          message={notification.message}
+          type={notification.type}
+          onClose={clearNotification}
         />
-    )}
+      )}
       <h2 className="text-2xl font-bold mb-4">Panel de Administración</h2>
 
       <div className="mb-4 flex flex-row space-x-2">

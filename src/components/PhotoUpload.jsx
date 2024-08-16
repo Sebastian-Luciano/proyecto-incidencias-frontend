@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
 import Avatar from 'react-avatar';
-import api from '../utils/api';
+import api from '../services/api.js';
 
-export default function PhotoUpload({ currentPhoto, onPhotoChange, name }) {
+export default function PhotoUpload({ currentPhoto, onPhotoChange, name, size = 76 }) {
   const [preview, setPreview] = useState(null);
 
   const handlePhotoChange = (e) => {
     const file = e.target.files[0];
     if (file) {
+      if (file.size > 5 * 1024 * 1024) {
+        alert('La imagen es demasiado grande. El tamaño máximo es 5MB.');
+        return;
+      }
       const reader = new FileReader();
       reader.onloadend = () => {
         setPreview(reader.result);
@@ -18,13 +22,13 @@ export default function PhotoUpload({ currentPhoto, onPhotoChange, name }) {
   };
 
   return (
-    <div className="relative w-[72px] h-[72px] rounded-md overflow-hidden group">
+    <div className={`relative w-[${size}px] h-[${size}px] rounded-full overflow-hidden group`}>
       {preview ? (
         <img src={preview} alt="Preview" className="w-full h-full object-cover" />
       ) : currentPhoto ? (
         <img src={api.getImageUrl(currentPhoto)} alt="Profile" className="w-full h-full object-cover" />
       ) : (
-        <Avatar name={name} size="96" round={true} />
+        <Avatar name={name} size={size} round={true} />
       )}
       <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
         <label htmlFor="photo-upload" className="cursor-pointer">
@@ -43,4 +47,4 @@ export default function PhotoUpload({ currentPhoto, onPhotoChange, name }) {
       />
     </div>
   );
-};
+}

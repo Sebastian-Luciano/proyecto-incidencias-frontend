@@ -17,4 +17,8 @@ api.interceptors.request.use((config) => {
   return Promise.reject(error);
 });
 
+api.getImageUrl = (imageName) => {
+  return `${BASE_URL}/uploads/${imageName}`;
+};
+
 export default api;

@@ -17,32 +17,12 @@ export default function IncidenceForm({ onIncidenceCreated }) {
     }
   }, []);
 
-/*   const handleSubmit = async (values, { setSubmitting, resetForm }) => {
-    try {
-      const formData = {
-        subject: values.subject,
-        type: values.type,
-        description: values.description,
-        latitude: location ? location.latitude : undefined,
-        longitude: location ? location.longitude : undefined,
-        image: file
-      };
-      await onIncidenceCreated(formData);
-      resetForm();
-      setFile(null);
-    } catch (error) {
-      console.error('Error creating incidence:', error);
-    } finally {
-      setSubmitting(false);
-    }
-  }; */
 
-// En IncidenceForm.jsx
 const handleSubmit = async (values, { setSubmitting, resetForm }) => {
   try {
     const incidenceData = {
       ...values,
-      image: file, // Incluimos el archivo en incidenceData
+      image: file, 
       latitude: location ? location.latitude : null,
       longitude: location ? location.longitude : null,
     };
