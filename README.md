@@ -53,8 +53,8 @@ VITE_API_URL=http://localhost:3000/api
 4. Ejecuta el proyecto:
 npm run dev
 
-🔐 Autenticación
 
+## 🔐 Autenticación
 Este frontend se conecta con el backend mediante JWT. Al iniciar sesión correctamente:
    - Se guarda el token en localStorage
    - Se protege el acceso a las rutas privadas
@@ -65,7 +65,8 @@ Este frontend se conecta con el backend mediante JWT. Al iniciar sesión correct
 Sebastián Javier Luciano Marceliano  
 🔗 [GitHub](https://github.com/Sebastian-Luciano)  
 ✉️ [sebastianperu7@gmail.com](mailto:sebastianperu7@gmail.com)
+
+##📄 Licencia
 ```
-📄 Licencia
 Este proyecto fue desarrollado con fines educativos como parte del curso de Full Stack Developer en FUNVAL.
 ```
