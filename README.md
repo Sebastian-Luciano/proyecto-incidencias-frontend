@@ -60,11 +60,13 @@ Este frontend se conecta con el backend mediante JWT. Al iniciar sesión correct
    - Se protege el acceso a las rutas privadas
    - Se accede a los datos del usuario y sus incidencias
 
-
+```markdown
 ## 🧠 Autor
-Sebastián Javier Luciano Marceliano
-🔗 GitHub
-✉️ sebastianperu7@gmail.com
-
+**Sebastián Javier Luciano Marceliano**  
+🔗 [GitHub](https://github.com/Sebastian-Luciano)  
+✉️ [sebastianperu7@gmail.com](mailto:sebastianperu7@gmail.com)
+```
+```
 📄 Licencia
 Este proyecto fue desarrollado con fines educativos como parte del curso de Full Stack Developer en FUNVAL.
+```
