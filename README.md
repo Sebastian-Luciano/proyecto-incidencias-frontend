@@ -41,19 +41,18 @@ Este repositorio contiene la interfaz de usuario del sistema de gestión de inci
 ## 🚀 Instalación y Ejecución
 
 1. Clona el repositorio:
-```markdown
-git clone [https://github.com/Sebastian-Luciano/proyecto-incidencias-frontend.git](https://github.com/Sebastian-Luciano/proyecto-incidencias-frontend.git)
-cd proyecto-incidencias-frontend
+```git clone``` [https://github.com/Sebastian-Luciano/proyecto-incidencias-frontend.git](https://github.com/Sebastian-Luciano/proyecto-incidencias-frontend.git)
+```cd proyecto-incidencias-frontend```
 
 2. Instala las dependencias:
-npm install
+```npm install```
 
 3. Crea un archivo .env en la raíz del proyecto con la siguiente variable:
-VITE_API_URL=[http://localhost:3000/api](http://localhost:3000/api)
+```VITE_API_URL=```[http://localhost:3000/api](http://localhost:3000/api)
 
 4. Ejecuta el proyecto:
-npm run dev
-```
+```npm run dev```
+
 
 ## 🔐 Autenticación
 Este frontend se conecta con el backend mediante JWT. Al iniciar sesión correctamente:
