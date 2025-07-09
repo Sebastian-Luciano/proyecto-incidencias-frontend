@@ -41,6 +41,7 @@ Este repositorio contiene la interfaz de usuario del sistema de gestión de inci
 ## 🚀 Instalación y Ejecución
 
 1. Clona el repositorio:
+```bash
 git clone https://github.com/Sebastian-Luciano/proyecto-incidencias-frontend.git
 cd proyecto-incidencias-frontend
 
