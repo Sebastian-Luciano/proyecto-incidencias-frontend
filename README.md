@@ -66,7 +66,7 @@ Sebastián Javier Luciano Marceliano
 🔗 [GitHub](https://github.com/Sebastian-Luciano)  
 ✉️ [sebastianperu7@gmail.com](mailto:sebastianperu7@gmail.com)
 
-##📄 Licencia
+## 📄 Licencia
 ```
 Este proyecto fue desarrollado con fines educativos como parte del curso de Full Stack Developer en FUNVAL.
 ```
