@@ -1,8 +1,28 @@
-# React + Vite
+# Sistema de Gestión de Incidencias - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto representa el frontend de una aplicación web para registrar, editar y administrar incidencias técnicas. Forma parte del curso de desarrollo Full Stack en FUNVAL.
 
-Currently, two official plugins are available:
+## 🛠️ Tecnologías utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React
+- React Hooks
+- React Router DOM
+- Tailwind CSS
+- Axios
+- SweetAlert2
+- Formulario controlado
+
+## 🚀 Funcionalidades principales
+
+- Registro de incidencias por categorías
+- Edición y eliminación de incidencias
+- Filtro por estado o tipo
+- Consumo de API REST desde el backend
+- Interfaz responsive y amigable
+
+## 📦 Instalación local
+
+1. Clona el repositorio:
+
+```bash
+git clone https://github.com/Sebastian-Luciano/proyecto-incidencias-frontend.git
